@@ -41,6 +41,7 @@ public class Main
 		/****************
 		 * ShoppingCart *
 		 ****************/
+		
 		//Instantiating a shopping cart object
 		System.out.println("Instantiating a shopping cart object");
 		ShoppingCartADT<Item> cart = new ShoppingCart();
