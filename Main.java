@@ -49,10 +49,14 @@ public class Main
 		//checking if this shopping cart is empty
 		System.out.println("Is this shopping cart empty: "+cart.isEmpty());
 		
-		//Using a for loop to add items in the shopping cart
+		//Using a for loop to add items in the shopping cart and printing the items added in the shopping cart
 		System.out.println("Using a for loop to add items in the shopping cart");
 		for (int i = 0; i < items.length; i++)
+		{
 			cart.add(items[i]);
+			System.out.print(items[i]+" ");
+		}
+		System.out.println("\n");
 		
 		//Evoking remove(Item)
 		System.out.println("Evoking removing(Item) to remove the first item that was added to this shopping cart");
@@ -99,7 +103,46 @@ public class Main
 		//Evoking toArray() and printing all the items in the shopping cart
 		for (Object obj : cart.toArray())
 			System.out.print(obj+" ");
+		System.out.println();
+		System.out.println();
+		cart.clear();
+		
+		//After tests, be sure to add and remove at least five items, printing items added, then printing contents of the cart
+		
+		//Adding eight items in the shopping cart and printing the items added
+		for (int i = 0; i < items.length; i++)
+		{
+			cart.add(items[i]);
+			System.out.print(items[i]+" ");
+		}
+		System.out.println("\n");
+		
+		System.out.println("This item is added to the shopping cart: "+item);
+			cart.add(item);
+		
+		Item tv = new Item("TV", 500);
+		System.out.println("This item is added to the shopping cart: "+tv);
+		cart.add(tv);
+		
+		Item ps = new Item("PS5", 600);
+		System.out.println("This item is added to the shopping cart: "+ps);
+		cart.add(ps);
+		
+		//using a for loop to remove 5 Item in the shopping cart
+		System.out.println("using a for loop to remove 5 Item in the shopping cart");
+		for (int i = 0; i < 5; i++)
+			cart.remove();
+		
+		//Printing the contents of this shopping cart
+		cart.contents();
+		
+		//Removing two more items and printing the contents of the shopping cart
+		System.out.println("Removing 2 more items and printing the content of the shopping cart");
+		cart.remove();
+		cart.remove();
+		cart.contents();
+		
+		
 		
 	}//end main
 }//end class
-
